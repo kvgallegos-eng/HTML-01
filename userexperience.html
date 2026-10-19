@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+  Encuesta sobre la experiencia en Dragón Dorado.
+  Secciones: anuncio y navegación; calificaciones de comida, servicio e higiene;
+  comentarios sobre las instalaciones; aviso de vista previa y pie de página.
+  animacion.js controla el menú de navegación.
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comparte tu opinión sobre la comida, el servicio, la higiene y las instalaciones de Dragón Dorado.">
+  <meta name="author" content="Dragón Dorado">
+  <meta name="theme-color" content="#e9dfcf">
+  <title>Encuesta de experiencia | Dragón Dorado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Un festín de sabor te espera <strong class="text-warning">·</strong> Pide para recoger o compartir en el restaurante</div>
+  <header class="wrap nav">
+    <a class="brand text-primary" href="index.html#inicio" aria-label="Dragón Dorado, inicio"><img class="brand-logo" src="media/logo.png" alt=""> Dragón Dorado</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="primary-navigation" aria-label="Navegación principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="carta.html">Carta</a>
+      <a href="userexperience.html">Encuesta</a>
+      <a href="profile.html">Perfil</a>
+      <a href="prueba.html">Prueba</a>
+      <a href="responsivo.html">Responsivo</a>
+      <a href="pedido.html">Hacer pedido</a>
+      <a href="#instalaciones">Instalaciones</a>
+      <a href="eventos.html">Eventos</a>
+      <details class="nav-event-dropdown">
+        <summary>Opciones para tu evento</summary>
+        <div class="nav-event-options">
+          <a class="nav-option-pasillos" href="eventos.html#pasillos">Amplios pasillos</a>
+          <a class="nav-option-presentaciones" href="eventos.html#presentaciones">Área de presentaciones</a>
+          <a class="nav-option-coffee" href="eventos.html#coffee-break">Coffee break</a>
+        </div>
+      </details>
+      <a href="index.html#galeria">Galería</a>
+      <a href="index.html#contacto">Ubicación y reservas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap survey-section" id="encuesta" aria-labelledby="survey-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow text-primary">Tu opinión nos ayuda a mejorar</p>
+          <h1 id="survey-title">Encuesta de experiencia</h1>
+        </div>
+        <p class="text-secondary">Cuéntanos cómo fue tu visita a Dragón Dorado. Nos tomará solo un momento.</p>
+      </div>
+
+      <form class="survey-form" aria-describedby="survey-note">
+        <div class="survey-grid">
+          <div class="survey-field">
+            <label class="form-label" for="food-rating">¿Qué te pareció el sabor de la comida?</label>
+            <select class="form-select" id="food-rating" name="food-rating" required>
+              <option value="" selected disabled>Selecciona una calificación</option>
+              <option value="excelente">Excelente</option>
+              <option value="muy-bueno">Muy bueno</option>
+              <option value="bueno">Bueno</option>
+              <option value="regular">Regular</option>
+              <option value="malo">Necesita mejorar</option>
+            </select>
+          </div>
+
+          <div class="survey-field">
+            <label class="form-label" for="service-rating">¿Cómo calificarías el servicio y la atención?</label>
+            <select class="form-select" id="service-rating" name="service-rating" required>
+              <option value="" selected disabled>Selecciona una calificación</option>
+              <option value="excelente">Excelente</option>
+              <option value="muy-bueno">Muy bueno</option>
+              <option value="bueno">Bueno</option>
+              <option value="regular">Regular</option>
+              <option value="malo">Necesita mejorar</option>
+            </select>
+          </div>
+
+          <div class="survey-field">
+            <label class="form-label" for="hygiene-rating">¿Qué te pareció la higiene del establecimiento?</label>
+            <select class="form-select" id="hygiene-rating" name="hygiene-rating" required>
+              <option value="" selected disabled>Selecciona una calificación</option>
+              <option value="excelente">Excelente</option>
+              <option value="muy-buena">Muy buena</option>
+              <option value="buena">Buena</option>
+              <option value="regular">Regular</option>
+              <option value="mala">Necesita mejorar</option>
+            </select>
+          </div>
+
+          <div class="survey-field" id="instalaciones">
+            <label class="form-label" for="facilities-feedback">¿Qué opinas de nuestras instalaciones?</label>
+            <textarea class="form-control" id="facilities-feedback" name="facilities-feedback" rows="4" placeholder="Cuéntanos qué te gustó o qué podríamos mejorar." required></textarea>
+          </div>
+        </div>
+
+        <p class="survey-note" id="survey-note">Este formulario es una vista previa; las respuestas todavía no se envían ni se guardan.</p>
+        <button class="button-primary survey-submit" type="button" disabled>Envío no disponible</button>
+      </form>
+    </section>
+    <section class="responsive-grid-example" aria-label="Ejemplo de columnas responsivas">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 col-xl-4 bg-primary text-white text-center p-3">Columna 1</div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-4 bg-secondary text-white text-center p-3">Columna 2</div>
+          <div class="col-12 col-md-12 col-lg-4 col-xl-4 bg-success text-white text-center p-3">Columna 3</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap"><span>© 2026 Dragón Dorado. Cocina china para compartir.</span><span>Tradición, sabor y buenos momentos.</span></footer>
+  <script src="animacion.js"></script>
+</body>
+</html>

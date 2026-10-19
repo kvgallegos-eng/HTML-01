@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+  Perfil del restaurante Dragón Dorado.
+  Secciones: anuncio y menú de navegación; encabezado de página;
+  perfil y propuesta gastronómica; datos importantes del restaurante;
+  ubicación y copyright en el pie de página.
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce el perfil, la propuesta gastronómica y los datos de Dragón Dorado.">
+  <meta name="author" content="Dragón Dorado">
+  <meta name="theme-color" content="#e9dfcf">
+  <title>Perfil del restaurante | Dragón Dorado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Un festín de sabor te espera <strong class="text-warning">·</strong> Pide para recoger o compartir en el restaurante</div>
+
+  <header class="wrap nav">
+    <a class="brand text-primary" href="index.html#inicio" aria-label="Dragón Dorado, inicio"><img class="brand-logo" src="media/logo.png" alt=""> Dragón Dorado</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="primary-navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="primary-navigation" aria-label="Navegación principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="carta.html">Carta</a>
+      <a href="pedido.html">Hacer pedido</a>
+      <a href="userexperience.html">Encuesta</a>
+      <a href="profile.html" aria-current="page">Perfil</a>
+      <a href="prueba.html">Prueba</a>
+      <a href="responsivo.html">Responsivo</a>
+      <a href="eventos.html">Eventos</a>
+      <details class="nav-event-dropdown">
+        <summary>Opciones para tu evento</summary>
+        <div class="nav-event-options">
+          <a class="nav-option-pasillos" href="eventos.html#pasillos">Amplios pasillos</a>
+          <a class="nav-option-presentaciones" href="eventos.html#presentaciones">Área de presentaciones</a>
+          <a class="nav-option-coffee" href="eventos.html#coffee-break">Coffee break</a>
+        </div>
+      </details>
+      <a href="index.html#contacto">Ubicación y reservas</a>
+    </nav>
+  </header>
+
+  <main>
+    <header class="wrap profile-heading">
+      <p class="eyebrow text-primary">Conoce nuestra casa</p>
+      <h1>Perfil del restaurante</h1>
+      <p class="text-secondary">Tradición, sabor y buenos momentos alrededor de la mesa.</p>
+    </header>
+
+    <section class="wrap profile-grid" aria-label="Perfil y datos de Dragón Dorado">
+      <article class="profile-card profile-story" aria-labelledby="profile-story-title">
+        <img class="profile-image" src="media/sopa.png" alt="Sopa ramen preparada con fideos, huevo y vegetales">
+        <div class="profile-card-body">
+          <p class="eyebrow text-primary">Nuestra propuesta</p>
+          <h2 id="profile-story-title">Cocina china para compartir</h2>
+          <p>En Dragón Dorado celebramos los sabores de la cocina china con recetas preparadas al momento e ingredientes frescos. Nuestra mesa invita a reunirse, descubrir nuevos sabores y disfrutar juntos.</p>
+          <div class="profile-highlights" aria-label="Características de nuestra cocina">
+            <span>Preparado al momento</span>
+            <span>Ingredientes frescos</span>
+            <span>Para compartir</span>
+          </div>
+        </div>
+      </article>
+
+      <aside class="profile-card profile-facts" aria-labelledby="restaurant-facts-title">
+        <p class="eyebrow text-primary">Información importante</p>
+        <h2 id="restaurant-facts-title">Datos del restaurante</h2>
+        <dl class="profile-facts-list">
+          <div><dt>Tipo de cocina</dt><dd>China</dd></div>
+          <div><dt>Servicio</dt><dd>Restaurante y pedidos para recoger</dd></div>
+          <div><dt>Preparación</dt><dd>Platillos preparados al momento</dd></div>
+          <div><dt>Especialidades</dt><dd>Arroz frito, chow mein, ramen y teriyaki</dd></div>
+          <div><dt>Menú</dt><dd><a href="carta.html">Consulta la carta completa</a></dd></div>
+        </dl>
+        <p class="profile-location-note">La dirección y el horario aún no están publicados.</p>
+      </aside>
+    </section>
+    <section class="responsive-grid-example" aria-label="Ejemplo de columnas responsivas">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 col-xl-4 bg-primary text-white text-center p-3">Columna 1</div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-4 bg-secondary text-white text-center p-3">Columna 2</div>
+          <div class="col-12 col-md-12 col-lg-4 col-xl-4 bg-success text-white text-center p-3">Columna 3</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap profile-footer">
+    <div>
+      <strong>Ubicación</strong>
+      <p>Los datos de dirección se añadirán cuando estén disponibles.</p>
+    </div>
+    <span>© 2026 Dragón Dorado. Cocina china para compartir.</span>
+  </footer>
+
+  <script src="animacion.js"></script>
+</body>
+</html>
